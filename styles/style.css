@@ -65,7 +65,7 @@ ol {
 
 .result__video-container {
   width: 711px;
-  height: 386px;
+  height: 402px;
   padding-bottom: 16px;
 }
 
@@ -81,7 +81,7 @@ ol {
   /*justify-content: space-between;
   align-items:start;*/
   display: grid;
-  grid-template-columns: 220px 1fr 1fr;
+  grid-template-columns: 225px 1fr 1fr;
   gap: 40px;
   /*align-items: end;
   justify-items: end;*/
@@ -111,7 +111,7 @@ ol {
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  padding-top: 1px;
+  padding-left: 0;
   appearance: none;
   font-family: inherit;
   color: #fff; 
@@ -119,16 +119,15 @@ ol {
   font-size: inherit;
 }
 
-/*input:focus {
-  outline: none;
-}
+/*.search-form__textfield:focus {
+  border: none;
+  padding-top: 2px;
+}*/
 
-input:focus-visible {
-  outline:none;
-}
-
-input:has(:focus-visible) {
-  outline: 1px solid white;
+/*.search-form__label:has(focus-visible) {
+  outline: 1 px solid white;
+  outline-offset: 2px;
+  border-radius: 0;
 }*/
 
 input::placeholder {
@@ -136,7 +135,7 @@ input::placeholder {
   font-weight: 400;
   font-size: 18px;
   color:rgb(255 255 255 / 0.7);
-  letter-spacing: -0.1px;
+  letter-spacing: -0.2px;
   /*border: none;*/
 }
 
@@ -169,6 +168,10 @@ input::placeholder {
   opacity: 0;
 }
 
+.search-form__label:hover {
+  cursor: pointer;
+}
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   opacity: 1;
 }
@@ -180,6 +183,12 @@ input::placeholder {
 .search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
 }
+
+/*.search-form__label:focus-visible {
+  /*border: 1px solid white;
+  outline: 1px solid white;
+  outline-offset: 1px 1px 1px 1px;
+}*/
 
 .button {
   width: 100%;
@@ -194,7 +203,22 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #504C4C;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  border: none;
+  outline: 3px double white;
+  text-decoration: none;
 }
 
 .search-form__submit-button {
@@ -227,11 +251,10 @@ input::placeholder {
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 390px;
+  max-width: 399px;
 }
 
 .content__list {
