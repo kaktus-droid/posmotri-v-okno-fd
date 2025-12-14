@@ -244,6 +244,21 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__card-link:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__card-link:focus-visible {
+  border-radius: 0;
+  outline: 1px solid #fff;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -260,26 +275,11 @@ ol {
   line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .content__video-card-description-container {
   flex-grow: 1;
   overflow: hidden;
-}
-
-.content__video-card-description-container:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.content__video-card:focus {
-  border: none;
-}
-
-.content__video-card:focus-visible {
-  border-radius: none;
-  outline: 1px solid #fff;
 }
 
 .content__list-item {
@@ -303,7 +303,7 @@ ol {
   min-width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: right top;
+  object-position: center;
 }
 
 /* Кастомный скроллбар */
